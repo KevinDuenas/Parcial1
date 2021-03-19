@@ -1,76 +1,132 @@
 header {
-
-
+  list-style: none;
+    display: flex;
+    align-items: stretch;
+    align-content: center;
+    
 }
-
 
 h2 {
 
+  display: flex;
+    flex: none;
+    border-style: solid;
+    border-width: 1px;
+    flex-grow: 1;
+    width: auto;
+    margin: 5px;
+    justify-content: center;
+
+    
 }
 
 .nav {
+  list-style: none;
+    display: flex;
+    
+    align-content: center;
+    
+}
 
-
-  }
-
-  li {
-
-
-  }
-
-  .content{
+li {
+  display: flex;
+    flex: none;
+    border-style: solid;
+    border-width: 1px;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    
+    flex-grow: 1;
+    width: auto;
+    margin: 5px;
+    justify-content: center;
 
 }
 
-  .aside {
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 4;
+  height: auto;
+}
 
-  }
-
-  .slidebox{
-
+.aside {
+  border-style: solid;
+    border-width: 1px;
+    display: flex;
+    flex-direction: column;
+    width: 800px;
    
-  }
+}
 
-  .article{
-
-  }
-
-
-.poem{
+.slidebox {
+  display: flex;
+  
+  border-style: solid;
+    border-width: 1px;
+    justify-content: center;
 
 }
 
+.article {
+  display: flex;
+  border-style: solid;
+    border-width: 1px;
+    flex-direction: row;
+    align-items: center;
+    flex-grow: 2;
+}
+
+.poem {
+  display: flex;
+  border-style: solid;
+    border-width: 1px;
+    flex-grow: 1;
+    height: auto;
+    width: 500px;
+}
 
 /*Device = Tablets, Ipads (portrait)
   Screen = B/w 600px to 990px*/
-  @media (min-width:600px) and (max-width: 990px)  {
-    .article {
+@media (min-width: 600px) and (max-width: 990px) {
+  .article {
+    flex-direction: column;
 
-  } 
-header{
-
-}
-}
-
-/*  Small devices    */
-@media (max-width:599px) {
-
-header,.content{
-
-}
-
-.nav {
+  }
+  header {
+    display: none;
 
 
   }
-
-
-.nav > li {
-
+  .aside {
+    
+      width: 150px;
+     
+  }
 }
 
+/*  Small devices    */
+@media (max-width: 599px) {
+  header,
+  .content {
+    display: none;
+  }
 
+  .nav {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    justify-content: space-between;
+  }
+
+  .nav > li {
+    display: flex;
+    flex: none;
+    border-style: solid;
+    border-width: 1px;
+    justify-content: center;
+    align-items: center;
+  }
 }
-
-
-  

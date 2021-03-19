@@ -15,15 +15,23 @@ let nombres  = ['Jorge','Isabel','Juan','Pedro','Karina','Jose','Arturo','Rogeli
 */
 
 // CREA TU FUNCION mayusculas aqui:
-
+function arrayToUpper(array){
+    for(i = 0; i < array.length; i++){
+        console.log(array[i].toUpperCase())
+    }
+}
 
 
 /*
-### F2 Crea una funcion llamada numVocales que reciba como parámetro un arreglo y cuente el numero de vocales de cada elemento y escriba en consola "datos: tiene [x] vocales , para cada elemento del arreglo" 
+### F2 Crea una funcion llamada numVocales que reciba como parámetro un palabra y cuente el numero de vocales de cada elemento y escriba en consola "datos: tiene [x] vocales , para cada elemento del arreglo" 
 */
 
 // CREA TU FUNCION numVocales aqui:
-
+function numVocales(palabra){
+    let vocales = /[aeiou]/gi
+    var n = palabra.match(vocales).length;
+    console.log(`${palabra}: tiene ${n} vocales`);
+}
 
 /*
 ### F3 Crea una funcion llamada numVocalesArr que reciba un arreglo y mande llamar a la funcion numVocales para que escriba la longitud de cada elemento del arreglo." 
@@ -31,7 +39,11 @@ let nombres  = ['Jorge','Isabel','Juan','Pedro','Karina','Jose','Arturo','Rogeli
 
 // CREA TU FUNCION numVocalesArr aqui:
 
-
+function numVocalesArr(arreglo){
+    for(i = 0; i < arreglo.length ; i++){
+        numVocales(arreglo[i]);
+    }
+}
 
 
 
@@ -43,6 +55,7 @@ A) Define un objeto tipo "Perro" que reciba 3 parametros
 1) Nombre
 2) Color
 3) Raza
+
 
 
 B) Crea 3 objectos  con diferentes valores
@@ -65,6 +78,44 @@ Deberia escribir en consola
 
 */
 
+// a y b
+var perro1 = {
+    nombre: "Wallas",
+    color: "cafe",
+    raza: "Chihuaha",
+    printInfo(){
+        console.log(`Nombre: ${this.nombre}, De color: ${this.color}, Raza: ${this.raza}`)
+    }
+}
+
+var perro2 = {
+    nombre: "pepe",
+    color: "blanco",
+    raza: "Shitzu",
+    printInfo(){
+        console.log(`Nombre: ${this.nombre}, De color: ${this.color}, Raza: ${this.raza}`)
+    }
+}
+
+var perro3 = {
+    nombre: "Kiara",
+    color: "Rojo",
+    raza: "Husky",
+    printInfo(){
+        console.log(`Nombre: ${this.nombre}, De color: ${this.color}, Raza: ${this.raza}`)
+    }
+}
+
+
+// c
+
+console.log(perro1.nombre, perro2.color, perro3.raza)
+
+
+//bonusss
+
+perro1.printInfo()
+
 
 
 /***
@@ -75,12 +126,13 @@ Deberia escribir en consola
 
 // F1
 
+arrayToUpper(nombres);
+
 
 // F2
-
-
+numVocales("aaAeEEiOuD");
 // F3
-
+numVocalesArr(nombres)
 
 
 
